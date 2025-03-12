@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buga Quiz - Acceso de Equipos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header vintage-paper">
+            <h1>Buga Quiz</h1>
+            <p>Acceso de Equipos</p>
+        </header>
+
+        <div class="login-container vintage-paper">
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="access-key">Llave de Acceso:</label>
+                    <div class="access-key-input">
+                        <input type="text" 
+                               id="access-key" 
+                               class="vintage-input" 
+                               placeholder="BUGA-XXXXXXXX"
+                               pattern="BUGA-[A-Z0-9]{8}"
+                               required
+                               autocomplete="off"
+                               maxlength="13">
+                        <div class="key-format-hint">
+                            Formato: BUGA-XXXXXXXX
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="vintage-button">
+                        <i class="fas fa-sign-in-alt"></i> Ingresar
+                    </button>
+                    <a href="register.html" class="vintage-button secondary">
+                        <i class="fas fa-user-plus"></i> Registrar Equipo
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de bienvenida -->
+    <div id="welcome-modal" class="modal hidden">
+        <div class="modal-content vintage-paper">
+            <div class="team-profile">
+                <h2>¡Bienvenido, <span id="team-name"></span>!</h2>
+                
+                <div class="team-info">
+                    <div class="info-section">
+                        <h3>Información del Equipo</h3>
+                        <p><strong>Colegio:</strong> <span id="school-name"></span></p>
+                        <p><strong>Responsable:</strong> <span id="responsible-name"></span></p>
+                        <p><strong>Rol:</strong> <span id="responsible-role"></span></p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Participantes</h3>
+                        <div id="team-members"></div>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <h3>Estadísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span id="games-played">0</span>
+                            <label>Partidas Jugadas</label>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <span id="total-score">0</span>
+                            <label>Puntuación Total</label>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-medal"></i>
+                            <span id="achievements">0</span>
+                            <label>Logros</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="start-game" class="vintage-button">
+                        <i class="fas fa-play"></i> Iniciar Nueva Partida
+                    </button>
+                    <button id="view-history" class="vintage-button secondary">
+                        <i class="fas fa-history"></i> Ver Historial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

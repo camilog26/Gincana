@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buga Quiz - Concurso Intercolegial</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pantalla de carga -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="vintage-loader">
+            <i class="fas fa-book-open"></i>
+            <p>Cargando el conocimiento de Buga...</p>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <header class="main-header vintage-paper">
+            <h1>Buga Quiz</h1>
+            <h2>Concurso Intercolegial de Conocimiento</h2>
+            <p>Explora la historia y cultura de nuestra Ciudad Señora</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Sección de bienvenida -->
+            <section class="welcome-section vintage-paper">
+                <div class="welcome-content">
+                    <h2>¡Bienvenidos al Desafío!</h2>
+                    <p>Pon a prueba tus conocimientos sobre Buga en este emocionante concurso intercolegial.</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Equipos</h3>
+                            <p>Forma tu equipo de 5 estudiantes y representa a tu colegio.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-medal"></i>
+                            <h3>Competencia</h3>
+                            <p>Compite contra otros colegios por el título de campeones.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-trophy"></i>
+                            <h3>Premios</h3>
+                            <p>Gana reconocimientos y premios especiales para tu institución.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="register.html" class="vintage-button primary">
+                        <i class="fas fa-user-plus"></i> Registrar Equipo
+                    </a>
+                    <a href="login.html" class="vintage-button secondary">
+                        <i class="fas fa-sign-in-alt"></i> Ingresar al Juego
+                    </a>
+                </div>
+            </section>
+
+            <!-- Sección de rankings -->
+            <section class="rankings-section vintage-paper">
+                <h2>Tabla de Posiciones</h2>
+                <div class="rankings-container">
+                    <div class="rankings-header">
+                        <h3>Top 5 Equipos</h3>
+                        <button id="refresh-rankings" class="vintage-button mini">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div id="rankings-list">
+                        <!-- Se llenará dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de instrucciones -->
+            <section class="instructions-section vintage-paper">
+                <h2>¿Cómo Participar?</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Forma tu Equipo</h3>
+                        <p>Reúne 5 estudiantes de grados 10° y 11° de tu colegio.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Regístrate</h3>
+                        <p>Completa el registro con un profesor o padre de familia responsable.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Compite</h3>
+                        <p>Ingresa con tu llave de acceso y demuestra tu conocimiento.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="main-footer vintage-paper">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-envelope"></i> info@bugaquiz.com</p>
+                    <p><i class="fas fa-phone"></i> (2) 236-1234</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Buga Quiz - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Panel de configuración -->
+    <div class="settings-panel">
+        <button id="theme-toggle" class="settings-btn" title="Cambiar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="sound-toggle" class="settings-btn" title="Activar/Desactivar sonido">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

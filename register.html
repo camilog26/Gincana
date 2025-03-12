@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buga Quiz - Registro de Equipos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header vintage-paper">
+            <h1>Registro de Equipos</h1>
+            <p>Buga Quiz - Conocimiento y Cultura</p>
+        </header>
+
+        <form id="team-registration" class="vintage-paper registration-form">
+            <!-- Nombre del equipo -->
+            <div class="form-section">
+                <h2>Identidad del Equipo</h2>
+                <div class="form-group">
+                    <label for="team-name">Nombre Creativo del Equipo:</label>
+                    <input type="text" id="team-name" class="vintage-input" required
+                           placeholder="Ej: Los Historiadores de Buga">
+                </div>
+            </div>
+
+            <!-- Información del Colegio y Responsable -->
+            <div class="form-section">
+                <h2>Información Institucional</h2>
+                <div class="form-group">
+                    <label for="school-name">Nombre del Colegio:</label>
+                    <input type="text" id="school-name" class="vintage-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="responsible-name">Nombre del Responsable:</label>
+                    <input type="text" id="responsible-name" class="vintage-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Rol del Responsable:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="teacher" name="responsible-role" value="teacher" required>
+                        <label for="teacher">Profesor</label>
+                        <input type="radio" id="parent" name="responsible-role" value="parent">
+                        <label for="parent">Padre de Familia</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de los Estudiantes -->
+            <div class="form-section">
+                <h2>Participantes</h2>
+                <div id="students-container">
+                    <!-- Se generarán 5 conjuntos de campos -->
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="vintage-button">
+                    <i class="fas fa-user-plus"></i> Registrar Equipo
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal para mostrar la llave de acceso -->
+    <div id="access-key-modal" class="modal hidden">
+        <div class="modal-content vintage-paper">
+            <h2>¡Registro Exitoso!</h2>
+            <p>Tu equipo ha sido registrado correctamente. Guarda esta llave de acceso en un lugar seguro:</p>
+            <div class="access-key-display">
+                <span id="access-key"></span>
+                <button id="copy-key" class="vintage-button secondary">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <p class="warning">¡No compartas esta llave! La necesitarás para acceder a la plataforma.</p>
+            <a href="login.html" class="vintage-button">
+                <i class="fas fa-sign-in-alt"></i> Ir al Inicio de Sesión
+            </a>
+        </div>
+    </div>
+
+    <script src="js/registration.js"></script>
+</body>
+</html>
